@@ -1,10 +1,7 @@
 from .models import Receipt, Item
 import math
-from decimal import Decimal, getcontext
-from datetime import time, date
-
-# getcontext().prec = 2  # Set precision for Decimal operations
-
+from decimal import Decimal
+from datetime import time
 
 def alphanumeric_rule(receipt: Receipt) -> int:
     """
@@ -40,8 +37,6 @@ def roundQuarterRule(receipt: Receipt) -> int:
     Returns:
         points: int
     """
-    print("receipt total", receipt.total_decimal)
-    print('total type', type(receipt.total_decimal))
     return 25 if receipt.total_decimal % Decimal('0.25') == 0 else 0
 
 def itemCountRule(receipt: Receipt) -> int:
@@ -103,9 +98,6 @@ def calculateAllItemRules(receipt: Receipt) -> int:
     Returns:
         points: `int` total points based on any item rules.
     """
-    x = [(item, rule(item) )for rule in item_rules for item in receipt.items]
-    print("individual item rule points", x)
-    [print(f"Item: {item.shortDescription}, Points: {points}") for item, points in x if points > 0]
     return sum(rule(item) for rule in item_rules for item in receipt.items)
 
 item_rules = [descriptionLengthRule, ]
@@ -123,14 +115,8 @@ def calculatePoints(receipt: Receipt) -> int:
         receipt: the `Receipt` object containing details.
 
     Returns:
-        The calculated points (currently always 0).
+        The calculated points
     """
-    x = [(i, rule(receipt)) for i, rule in enumerate(receipt_rule_fns)]
-    print('counts from each rule', )
-    print(x)
-
     points = sum(rule(receipt) for rule in receipt_rule_fns)
     points += calculateAllItemRules(receipt)
-    
-    print(f"Calculated points (placeholder): {points} for receipt from {receipt.retailer}") 
     return points

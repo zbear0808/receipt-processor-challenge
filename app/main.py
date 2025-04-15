@@ -9,11 +9,9 @@ import re
 
 from .models import Receipt, ProcessResponse, PointsResponse
 from .services import calculatePoints
-from .storage import save_receipt, get_points, receipt_exists
+from .storage import save_receipt, get_points
 
-from logging import basicConfig, INFO, DEBUG, ERROR
 
-# Create FastAPI app instance
 app = FastAPI(
     title="Receipt Processor",
     description="A simple receipt processor API based on OpenAPI spec.",
@@ -44,7 +42,6 @@ async def processReceipt(receipt: Receipt):
     return ProcessResponse(id=receipt_id)
 
 
-# Define the regex pattern for the ID path parameter, matching the OpenAPI spec
 ID_PATTERN = r"^\S+$"
 
 @app.get(

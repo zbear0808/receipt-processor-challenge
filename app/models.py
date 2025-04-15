@@ -1,6 +1,5 @@
-import re
 from typing import List, Annotated
-from pydantic import BaseModel, Field, StringConstraints, BeforeValidator
+from pydantic import BaseModel, Field, StringConstraints
 from datetime import date, time
 from decimal import Decimal
 
