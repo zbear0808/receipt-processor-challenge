@@ -1,0 +1,10 @@
+{
+  "retailer": "Corner Store",
+  "purchaseDate": "2022-01-03",
+  "purchaseTime": "10:00",
+  "items": [
+    { "shortDescription": "Milk", "price": "3.00" },
+    { "shortDescription": "Bread", "price": "2.00" }
+  ],
+  "total": "5.00"
+}

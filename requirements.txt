@@ -1,0 +1,14 @@
+fastapi>=0.115.12
+uvicorn>=0.34.1
+pydantic>=1.10.2
+
+
+
+# these were the versions I used, but i also didn't use any special new features
+# so if for some reason these versions aren't compatble with your machine or the versions were deleted from pypi, you can always use the latest versions of these packages
+# just uncomment the lines below for a lower risk of incompatibility / instability
+
+
+# fastapi
+# uvicorn[standard]
+# pydantic

@@ -1,0 +1,13 @@
+{
+  "retailer": "Megamart & Co.",
+  "purchaseDate": "2022-08-15",
+  "purchaseTime": "15:01",
+  "items": [
+    { "shortDescription": "Imported Cheese", "price": "15.50" },
+    { "shortDescription": "Crackers", "price": "3.25" },
+    { "shortDescription": "Olives", "price": "4.75" },
+    { "shortDescription": "Wine", "price": "12.50" },
+    { "shortDescription": "   Bag   ", "price": "0.50" }
+  ],
+  "total": "36.50"
+}

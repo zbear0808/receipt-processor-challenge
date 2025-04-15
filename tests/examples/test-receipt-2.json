@@ -1,0 +1,11 @@
+{
+  "retailer": "Grocery Mart",
+  "purchaseDate": "2022-03-20",
+  "purchaseTime": "14:33",
+  "items": [
+    { "shortDescription": "Apples", "price": "1.50" },
+    { "shortDescription": "Bananas", "price": "0.75" },
+    { "shortDescription": "Oranges", "price": "2.00" }
+  ],
+  "total": "4.25"
+}
